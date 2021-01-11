@@ -1,0 +1,77 @@
+1.1 After entering ‘ls’ into my terminal, a list of all the contents of my working directory in displayed
+1.2 After entering ‘man ls’ an explanation on what the ls command is is displayed with all the - options explained too. To list the contents of the current folder, along with human-readable filesizes, sorted by filesize I used the command ‘ls -lrS’
+
+2.1 my working directory is /Users/mauro, pwd stands for print working directory
+cd probably stands for current directory
+
+Set your shell’s working directory to the shell_magic folder. What command did you use?
+cd /Users/mauro/UACCMET2J/shell_magic
+
+3.1
+Used the command ‘touch hello world’, and it created two files in my shell_magic folder, one called hello the other called world
+
+3.2
+mkdir hello_world
+Created a folder called hello_world
+
+3.3
+mv probably stands for move, it is a command to vome files
+touch hello_world —> didn’t work
+touch hello_world.bfe —> worked
+mv hello_world.bfe hello_world.txt
+mv hello_world.txt hello_world
+mv /Users/mauro/UACCMET2J/shell_magic/hello_world/hello_world.txt /Users/mauro/UACCMET2J/shell_magic/hello_world.txt
+cd /Users/mauro/UACCMET2J/shell_magic/hello_world
+mv /Users/mauro/UACCMET2J/shell_magic/hello_world.txt .
+mv hello_world.txt ..
+
+3.4
+cp /Users/mauro/UACCMET2J/shell_magic/hello_world.txt .
+cp /Users/mauro/UACCMET2J/shell_magic/hello_world.txt world_hello.txt
+
+3.5
+cd /Users/mauro/UACCMET2J/shell_magic
+rm hello_world.txt
+rm /Users/mauro/UACCMET2J/shell_magic/hello_world/hello_world.txt
+rm: /Users/mauro/UACCMET2J/shell_magic/hello_world: is a directory
+rm -d /Users/mauro/UACCMET2J/shell_magic/hello_world
+
+4.1 
+cat —> concatenate
+cat hello_world.txt —> no output, probably because it is an empty file
+echo —> the echo utility writes any specified operands, separated by single blank (` ') characters and followed by a newline (`\n') character, to the standard output.
+echo 'file contents' > file.txt
+echo 'more contents' >> file.txt
+
+4.3
+ls -m1 > /Users/mauro/UACCMET2J/shell_magic/home_content.list
+
+5.1
+What does wc stand for? Word count
+wc | cat home_content.list 
+ls | wc
+
+5.2
+echo hello world \n world hello > helloworld.txt
+Command: grep hello helloworld.txt
+	hello world 
+	world hello
+grep hello worldhello.txt helloworld.txt 
+worldhello.txt:world hello
+helloworld.txt:hello world 
+helloworld.txt:world hello
+
+5.3
+grep hello helloworld.txt
+cat helloworld.txt | grep world | wc | less
+
+6.2
+tar -xzvf aup.tar.gz
+
+6.3
+find * aup
+find * aup | grep .aup | wc -l
+    1928
+
+aup/cohort3/s241f/spare-second-version-r2/s241f2.aup
+less aup/cohort1/s001f/s001f5.aup
